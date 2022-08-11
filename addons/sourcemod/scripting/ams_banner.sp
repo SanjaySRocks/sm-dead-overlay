@@ -12,13 +12,13 @@ public Plugin myinfo = {
     author      = "skyin",
     description = "Display overlay banner to player screen when they are dead",
     version     = "1.1.2",
-    url         = "http://www.amsgaming.in"
+    url         = "http://github.com/sanjaysrocks"
 };
 
 public void OnPluginStart(){
 
-    gCvarEnable = CreateConVar("sm_banner_enable", "1", "Enable/Disable plugin 1 - Enable , 0 - Disable");
-    gCvarIcon = CreateConVar("sm_banner_file", "amsgamers/icon", "set file name of banner to show on screen as an overlay");
+    gCvarEnable = CreateConVar("ams_banner_enable", "1", "1/0 - Enable/Disable this plugin");
+    gCvarIcon = CreateConVar("ams_banner_file", "amsgamers/icon", "file path of .vmt or .vtf file without extension excluding materials from path");
     
     HookEvent("player_death", PlayerDeath) // Hook Player Death
     HookEvent("player_spawn", PlayerSpawn) // Hook Player Death
@@ -31,11 +31,7 @@ public void OnPluginStart(){
 
 public void OnMapStart()
 {
-    int iEnable = GetConVarInt(gCvarEnable);
-
-    if(iEnable){
-        PrecacheDecalAnyDownload(BufferBanner);
-    }
+    PrecacheDecalAnyDownload(BufferBanner);
 }
 
 
