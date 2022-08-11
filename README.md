@@ -39,6 +39,9 @@ To compile this plugin you can use https://spider.limetech.io
 2.  Copy `materials` to `materials` in csgo directory 
 3.  Restart Server & Done
 
+## Screenshot
+
+![csgo_OKKPxXK1ra](https://user-images.githubusercontent.com/30376256/184191257-e7cb59b5-408a-4586-bdc2-33fc5b35091a.png)
 
 
 ## Authors
